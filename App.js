@@ -66,7 +66,7 @@ const CalculadoraChurrasco = () => {
       // Configura um novo timeout
       timeoutRef.current = setTimeout(() => {
         onChange(text);
-      }, 4000); // 2 segundo de delay
+      }, 3000); // 3 segundo de delay
     };
   
     React.useEffect(() => {
@@ -166,7 +166,7 @@ const CalculadoraChurrasco = () => {
               label="Carne (gramas):" 
               value={padroes.carneAdulto} 
               onChange={(t) => ajustarPadroes('carneAdulto', t)} 
-              unit="g"
+              unit="gr"
             />
             
             <InputField 
@@ -180,7 +180,7 @@ const CalculadoraChurrasco = () => {
               label="Salada (gramas):" 
               value={padroes.saladaAdulto} 
               onChange={(t) => ajustarPadroes('saladaAdulto', t)} 
-              unit="g"
+              unit="gr"
             />
             
             {consideraCerveja && (
@@ -205,7 +205,7 @@ const CalculadoraChurrasco = () => {
               label="Carne (gramas):" 
               value={padroes.carneCrianca} 
               onChange={(t) => ajustarPadroes('carneCrianca', t)} 
-              unit="g"
+              unit="gr"
             />
             
             <InputField 
@@ -219,7 +219,7 @@ const CalculadoraChurrasco = () => {
               label="Salada (gramas):" 
               value={padroes.saladaCrianca} 
               onChange={(t) => ajustarPadroes('saladaCrianca', t)} 
-              unit="g"
+              unit="gr"
             />
             
             <InputField 
@@ -267,10 +267,6 @@ const CalculadoraChurrasco = () => {
             unit="garrafas (600ml)" 
           />
         </View>
-        
-        <Text style={styles.observacao}>
-          {!mostrarAjustes && ' Toque em "Personalizar Quantidades" para ajustar.'}
-        </Text>
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -282,6 +278,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
     padding: 20,
     paddingTop: Platform.OS === 'ios' ? 60 : 40,
+    
   },
   title: {
     fontSize: 18,
@@ -418,7 +415,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 20,
     fontWeight: '900',
-    //color: COLORS.dark
   },
 });
 
