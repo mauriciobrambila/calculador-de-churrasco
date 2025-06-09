@@ -269,7 +269,6 @@ const CalculadoraChurrasco = () => {
         </View>
         
         <Text style={styles.observacao}>
-          * Valores calculados com base nas quantidades personalizadas.
           {!mostrarAjustes && ' Toque em "Personalizar Quantidades" para ajustar.'}
         </Text>
       </ScrollView>
@@ -295,7 +294,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 3,
   },
   subtitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '700',
     color: COLORS.dark,
     marginBottom: 5,
@@ -312,7 +311,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 6,
-    elevation: 5,
+    elevation: 15,
   },
   inputGroup: {
     marginBottom: 5,
@@ -385,7 +384,7 @@ const styles = StyleSheet.create({
   },
   ajustesButton: {
     backgroundColor: COLORS.secondary,
-    padding: 15,
+    padding: 12,
     borderRadius: 20,
     marginBottom: 15,
     alignItems: 'center',
@@ -412,12 +411,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   observacao: {
-    marginTop: 3,
-    fontSize: 12,
-    color: '#95a5a6',
+    marginTop: 1,
+    fontSize: 14,
+    color: '#008000',
     fontStyle: 'italic',
     textAlign: 'center',
     marginBottom: 20,
+    fontWeight: '900',
+    //color: COLORS.dark
   },
 });
 
